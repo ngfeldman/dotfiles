@@ -4,6 +4,9 @@ setopt hist_verify
 setopt append_history  # looks like noappendhistory is disabled by default so this doesn't do anything???
 setopt extended_history
 
+# TODO: http://zsh.sourceforge.net/Guide/zshguide02.html#l23 suggests putting all environment variables in `~/.zshenv`.
+# I'll do that once I have a reason to.
+
 # /usr/local/opt/python/libexec/bin is here for the Homebrew 'python' package, which currently refers to python2
 # but doesn't want to put python in your $PATH and assume you want it to run version 2.
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
