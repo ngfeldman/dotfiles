@@ -12,3 +12,7 @@ export HISTFILE=~/.history  # where to save history
 export SAVEHIST=1000000  # max number of commands saved in history file
 export HISTSIZE=1000000  # max number of commands remembered by session
                          # and written to history at end of session
+
+autoload -Uz colors  # load `colors` function... or allow to be loaded the first time it's used
+colors
+export PS1="%{$fg[cyan]%B%}%64<...<%~%{$reset_color%} %(?..%{$fg[red]%}(%?%)%{$reset_color%})%{%B%}%#%{%b%} "
