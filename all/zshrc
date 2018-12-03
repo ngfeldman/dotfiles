@@ -7,10 +7,6 @@ setopt extended_history
 # TODO: http://zsh.sourceforge.net/Guide/zshguide02.html#l23 suggests putting all environment variables in `~/.zshenv`.
 # I'll do that once I have a reason to.
 
-# /usr/local/opt/python/libexec/bin is here for the Homebrew 'python' package, which currently refers to python2
-# but doesn't want to put python in your $PATH and assume you want it to run version 2.
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 export HISTFILE=~/.history  # where to save history
 export SAVEHIST=1000000  # max number of commands saved in history file
 export HISTSIZE=1000000  # max number of commands remembered by session
