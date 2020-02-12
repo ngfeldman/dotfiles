@@ -24,9 +24,16 @@ function confirm_overwrite_if_exists {
     return 0
 }
 
-mkdir -p compiled
+echo "Downloading external resources..."
+mkdir -p downloaded
+wget -O downloaded/git-completion.bash \
+    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+wget -O downloaded/git-completion.zsh \
+    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+
 
 echo "Compiling config files..."
+mkdir -p compiled
 
 # stupidly relying on lines starting with '#' being a comment in all cases
 for filename in $(ls all/); do
@@ -59,6 +66,20 @@ confirm_overwrite_if_exists "${destpath}" \
 
 sourcepath="${DIRNAME}/compiled/zshrc"
 destpath="${HOMEDIR}/.zshrc"
+confirm_overwrite_if_exists "${destpath}" \
+    && echo "copying ${sourcepath} to ${destpath}" \
+    && cp "${sourcepath}" "${destpath}" \
+    || echo "skipped copying ${sourcepath} to ${destpath}"
+
+mkdir -p "${HOMEDIR}/.zsh"
+sourcepath="${DIRNAME}/downloaded/git-completion.bash"
+destpath="${HOMEDIR}/.zsh/git-completion.bash"
+confirm_overwrite_if_exists "${destpath}" \
+    && echo "copying ${sourcepath} to ${destpath}" \
+    && cp "${sourcepath}" "${destpath}" \
+    || echo "skipped copying ${sourcepath} to ${destpath}"
+sourcepath="${DIRNAME}/downloaded/git-completion.zsh"
+destpath="${HOMEDIR}/.zsh/git-completion.zsh"
 confirm_overwrite_if_exists "${destpath}" \
     && echo "copying ${sourcepath} to ${destpath}" \
     && cp "${sourcepath}" "${destpath}" \
