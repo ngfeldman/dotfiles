@@ -57,6 +57,13 @@ confirm_overwrite_if_exists "${destpath}" \
     && cp "${sourcepath}" "${destpath}" \
     || echo "skipped copying ${sourcepath} to ${destpath}"
 
+sourcepath="${DIRNAME}/compiled/gitignore_global"
+destpath="${HOMEDIR}/.gitignore_global"
+confirm_overwrite_if_exists "${destpath}" \
+    && echo "copying ${sourcepath} to ${destpath}" \
+    && cp "${sourcepath}" "${destpath}" \
+    || echo "skipped copying ${sourcepath} to ${destpath}"
+
 sourcepath="${DIRNAME}/compiled/sshconfig"
 destpath="${HOMEDIR}/.ssh/config"
 confirm_overwrite_if_exists "${destpath}" \
