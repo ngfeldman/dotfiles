@@ -3,6 +3,7 @@
     email = nathangfeldman@gmail.com
 
 [core]
+    editor = vim
     excludesfile = ~/.gitignore_global   
 
 [push]
