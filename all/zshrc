@@ -20,3 +20,8 @@ export PS1="%{$fg[cyan]%B%}%64<...<%~%{$reset_color%} %(?..%{$fg[red]%}(%?%)%{$r
 fpath=(~/.zsh $fpath)
 autoload -U compinit
 compinit
+
+# Set up pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
