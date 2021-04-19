@@ -71,13 +71,6 @@ confirm_overwrite_if_exists "${destpath}" \
     && cp "${sourcepath}" "${destpath}" \
     || echo "skipped copying ${sourcepath} to ${destpath}"
 
-sourcepath="${DIRNAME}/compiled/zshenv"
-destpath="${HOMEDIR}/.zshenv"
-confirm_overwrite_if_exists "${destpath}" \
-    && echo "copying ${sourcepath} to ${destpath}" \
-    && cp "${sourcepath}" "${destpath}" \
-    || echo "skipped copying ${sourcepath} to ${destpath}"
-
 sourcepath="${DIRNAME}/compiled/zshrc"
 destpath="${HOMEDIR}/.zshrc"
 confirm_overwrite_if_exists "${destpath}" \

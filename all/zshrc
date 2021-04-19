@@ -20,4 +20,3 @@ export PS1="%{$fg[cyan]%B%}%64<...<%~%{$reset_color%} %(?..%{$fg[red]%}(%?%)%{$r
 fpath=(~/.zsh $fpath)
 autoload -U compinit
 compinit
-
