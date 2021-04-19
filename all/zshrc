@@ -21,7 +21,3 @@ fpath=(~/.zsh $fpath)
 autoload -U compinit
 compinit
 
-# Set up pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
