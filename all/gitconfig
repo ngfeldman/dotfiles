@@ -6,6 +6,12 @@
     editor = vim
     excludesfile = ~/.gitignore_global   
 
+[init]
+    defaultBranch = main
+
+[pull]
+    ff = only
+
 [push]
     # When pushing a branch that doesn't already track a remote branch, push
     # push to the remote branch of the same name and automatically start
