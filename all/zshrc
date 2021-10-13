@@ -16,6 +16,8 @@ autoload -Uz colors  # load `colors` function... or allow to be loaded the first
 colors
 export PS1="%{$fg[cyan]%B%}%64<...<%~%{$reset_color%} %(?..%{$fg[red]%}(%?%)%{$reset_color%})%{%B%}%#%{%b%} "
 
+export GPG_TTY=$(tty)
+
 # Include functions from ~/.zsh/git-completion.zsh etc.
 fpath=(~/.zsh $fpath)
 autoload -U compinit
