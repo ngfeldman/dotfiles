@@ -22,3 +22,6 @@ export GPG_TTY=$(tty)
 fpath=(~/.zsh $fpath)
 autoload -U compinit
 compinit
+
+# Enable shell completion for kubectl, if installed.
+which kubectl && source <(kubectl completion zsh)
