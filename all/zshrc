@@ -24,4 +24,4 @@ autoload -U compinit
 compinit
 
 # Enable shell completion for kubectl, if installed.
-which kubectl > /dev/null && source <(kubectl completion zsh)
+which kubectl > /dev/null && source <(kubectl completion zsh) || :

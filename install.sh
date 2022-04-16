@@ -26,9 +26,9 @@ function confirm_overwrite_if_exists {
 
 echo "Downloading external resources..."
 mkdir -p downloaded
-wget -O downloaded/git-completion.bash \
+curl -o downloaded/git-completion.bash \
     https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-wget -O downloaded/git-completion.zsh \
+curl -o downloaded/git-completion.zsh \
     https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 
 
