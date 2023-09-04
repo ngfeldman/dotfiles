@@ -9,6 +9,9 @@
 [commit]
     gpgsign = true
 
+[diff]
+    wsErrorHighlight = all
+
 [init]
     defaultBranch = main
 
